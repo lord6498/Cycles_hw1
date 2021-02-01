@@ -11,16 +11,16 @@ public class Main {
         int averagesum = service.averageSumm(salesPerMonth);
         System.out.println(averagesum + " Average ");
 
-        String maxValue = service.maxValue(salesPerMonth);
+        int maxValue = service.maxValue(salesPerMonth);
         System.out.println(maxValue);
 
-        String minValue = service.minValue(salesPerMonth);
+        int minValue = service.minValue(salesPerMonth);
         System.out.println(minValue);
 
-        String monthLess = service.valueLessThenAverage(salesPerMonth);
+        int monthLess = service.valueLessThenAverage(salesPerMonth);
         System.out.println(monthLess);
 
-        String monthMore = service.valueMoreThenAverage(salesPerMonth);
+        int monthMore = service.valueMoreThenAverage(salesPerMonth);
         System.out.println(monthMore);
 
 

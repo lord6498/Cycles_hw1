@@ -36,38 +36,34 @@ class StatServiceTest {
 
     @Test
     void maxValue() {
-        String expected = "6";
+        int expected = 6;
         int[] salesPerMonth = new int[]{8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        String actual = service.maxValue(salesPerMonth);
-        String[] data = actual.split("");
-        Assertions.assertEquals(expected, data[0]);
+        int actual = service.maxValue(salesPerMonth);
+        Assertions.assertEquals(expected, actual);
     }
 
     @Test
     void minValue() {
-        String expected = "9";
+        int expected = 9;
         int[] salesPerMonth = new int[]{8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        String actual = service.minValue(salesPerMonth);
-        String[] data = actual.split("");
-        Assertions.assertEquals(expected, data[0]);
+        int actual = service.minValue(salesPerMonth);
+        Assertions.assertEquals(expected, actual);
     }
 
     @Test
     void valueLessThenAverage() {
-        String expected = "5";
+        int expected = 5;
         int[] salesPerMonth = new int[]{8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        String actual = service.valueLessThenAverage(salesPerMonth);
-        String[] data = actual.split("");
-        Assertions.assertEquals(expected, data[0]);
+        int actual = service.valueLessThenAverage(salesPerMonth);
+        Assertions.assertEquals(expected, actual);
     }
 
     @Test
     void valueMoreThenAverage() {
-        String expected = "5";
+        int expected = 5;
         int[] salesPerMonth = new int[]{8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        String actual = service.valueMoreThenAverage(salesPerMonth);
-        String[] data = actual.split("");
-        Assertions.assertEquals(expected, data[0]);
+        int actual = service.valueMoreThenAverage(salesPerMonth);
+        Assertions.assertEquals(expected, actual);
     }
 
 }

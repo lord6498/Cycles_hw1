@@ -23,7 +23,7 @@ public class StatService {
     }
 
     // Максимальная продажа
-    public String maxValue(int[] salesPerMonth) {
+    public int maxValue(int[] salesPerMonth) {
         long max = salesPerMonth[0];
         long monthCurrent = 0;
         long month = 0;
@@ -36,11 +36,11 @@ public class StatService {
 
         }
 
-        return month + " Month " + max;
+        return (int) month;
     }
 
     // Минимальная продажа
-    public String minValue(int[] salesPerMonth) {
+    public int minValue(int[] salesPerMonth) {
         long min = salesPerMonth[0];
         long monthCurrent = 0;
         long month = 0;
@@ -53,11 +53,11 @@ public class StatService {
 
         }
 
-        return month + " Month " + min;
+        return (int) month;
     }
 
     // Максимальная продажа
-    public String valueLessThenAverage(int[] salesPerMonth) {
+    public int valueLessThenAverage(int[] salesPerMonth) {
         long average = IntStream.of(salesPerMonth).sum()/salesPerMonth.length;
         long month = 0;
         for (int currentValue : salesPerMonth) {
@@ -67,11 +67,11 @@ public class StatService {
 
         }
 
-        return month + " Months below average summ";
+        return (int) month;
     }
 
     // Максимальная продажа
-    public String valueMoreThenAverage(int[] salesPerMonth) {
+    public int valueMoreThenAverage(int[] salesPerMonth) {
         long average = IntStream.of(salesPerMonth).sum()/salesPerMonth.length;
         long month = 0;
         for (int currentValue : salesPerMonth) {
@@ -81,7 +81,7 @@ public class StatService {
 
         }
 
-        return month + " Months with more than average summ";
+        return (int) month;
     }
 
 }
