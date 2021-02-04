@@ -6,10 +6,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.MethodSource;
-
-
 import java.util.stream.Stream;
-
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
@@ -36,7 +33,7 @@ class StatServiceTest {
 
     @Test
     void maxValue() {
-        int expected = 6;
+        int expected = 8;
         int[] salesPerMonth = new int[]{8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int actual = service.maxValue(salesPerMonth);
         Assertions.assertEquals(expected, actual);

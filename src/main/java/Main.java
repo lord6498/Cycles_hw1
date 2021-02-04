@@ -8,8 +8,8 @@ public class Main {
         int sum = service.salesPerMonth(salesPerMonth);
         System.out.println(sum + " Summ of values");
 
-        int averagesum = service.averageSumm(salesPerMonth);
-        System.out.println(averagesum + " Average ");
+        int average = service.averageSumm(salesPerMonth);
+        System.out.println(average + " Average ");
 
         int maxValue = service.maxValue(salesPerMonth);
         System.out.println(maxValue);

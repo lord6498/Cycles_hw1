@@ -5,83 +5,83 @@ import java.util.stream.IntStream;
 public class StatService {
     // Сумма всех продаж за месяц
     public int salesPerMonth(int[] salesPerMonth) {
-        long valueForReturn = 0;
+        int valueForReturn = 0;
         for (int summ : salesPerMonth) {
             valueForReturn += summ;
         }
-        return (int) valueForReturn;
+        return valueForReturn;
     }
 
     // Среднняя сумма продаж
     public int averageSumm(int[] salesPerMonth) {
-        long valueForReturn = 0;
+        int valueForReturn = 0;
         for (int summ : salesPerMonth) {
             valueForReturn += summ;
         }
         valueForReturn /= salesPerMonth.length;
-        return (int) valueForReturn;
+        return valueForReturn;
     }
 
     // Максимальная продажа
     public int maxValue(int[] salesPerMonth) {
-        long max = salesPerMonth[0];
-        long monthCurrent = 0;
-        long month = 0;
+        int max = salesPerMonth[0];
+        int monthCurrent = 0;
+        int month = 0;
         for (int currentValue : salesPerMonth) {
-            monthCurrent = monthCurrent + 1;
-            if (currentValue > max) {
+            monthCurrent++;
+            if (currentValue >= max) {
                 max = currentValue;
                 month = monthCurrent;
             }
 
         }
 
-        return (int) month;
+        return month;
     }
 
     // Минимальная продажа
     public int minValue(int[] salesPerMonth) {
-        long min = salesPerMonth[0];
-        long monthCurrent = 0;
-        long month = 0;
+        int min = salesPerMonth[0];
+        int monthCurrent = 0;
+        int month = 0;
         for (int currentValue : salesPerMonth) {
-            monthCurrent = monthCurrent + 1;
-            if (currentValue < min) {
+            monthCurrent++;
+            if (currentValue <= min) {
                 min = currentValue;
                 month = monthCurrent;
             }
 
         }
 
-        return (int) month;
+        return  month;
     }
 
-    // Максимальная продажа
+    // Количество месяцев меньше средней суммы
     public int valueLessThenAverage(int[] salesPerMonth) {
-        long average = IntStream.of(salesPerMonth).sum()/salesPerMonth.length;
-        long month = 0;
+        int average = averageSumm(salesPerMonth);
+        int month = 0;
         for (int currentValue : salesPerMonth) {
             if (currentValue < average) {
-                month = month+1;
+                month++;
             }
 
         }
 
-        return (int) month;
+        return month;
     }
 
-    // Максимальная продажа
+    // Количество месяцев больше средней суммы
     public int valueMoreThenAverage(int[] salesPerMonth) {
-        long average = IntStream.of(salesPerMonth).sum()/salesPerMonth.length;
-        long month = 0;
+        int average = averageSumm(salesPerMonth);
+        int month = 0;
         for (int currentValue : salesPerMonth) {
             if (currentValue > average) {
-                month = month+1;
+                month++;
             }
 
         }
 
-        return (int) month;
+        return month;
     }
 
 }
